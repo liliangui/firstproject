@@ -1,0 +1,218 @@
+<h2 id="1">1.  <span id="jump">目录</span></h2>
+这是一个自动生成目录的语法。下面是下一级目录：
+<h3 id="1.1">1.1 第二级说明1</h3>
+这是二级目录的一个测试文本。
+<h3 id="1.2">1.2 第二级说明2</h3>
+这是二级目录的第二个测试文本。
+<h2 id="2">2.  <span id="jump">目录</span></h2>
+这是一个自动生成目录的语法。下面是下一级目录：
+<h3 id="2.1">2.1 第二级说明1</h3>
+这是二级目录的一个测试文本。
+<h3 id="2.2">2.2 第二级说明2</h3>
+这是二级目录的第二个测试文本。
+<h2 id="3">3. 结语</h2>
+
+最终生成个目录：
+* [1. 生成目录](#1)
+    * [1.1 第二级1](#1.1)
+    * [1.2 第二级2](#1.2)
+* [2. 生成目录](#2)
+    * [2.1 第二级1](#2.1)
+    * [2.2 第二级2](#2.2)
+* [2.结语](#2)
+
+
+# 阅读目录 #
+
+0、[目录](#jump0)
+
+ - 0.1：[子目录](#jump0.1) 
+
+
+
+
+<h2 id="0">0. <span id="jump0">目录</span></h2>
+![](https://i.imgur.com/kfCyDke.png)
+
+
+<h3 id="0.1">0.1 <span id="jump0.1">子目录：</span></h3>
+
+
+
+
+
+
+
+1、[目录内容](#jump1)
+
+  
+
+-  1.1：[目录内容](#jump1.1)
+
+
+
+<h2 id="1">1. <span id="jump1">目录</span></h2>
+内容
+<h3 id="1.1">1.1 <span id="jump1.1">目录</span></h3>
+内容
+
+
+
+
+
+
+
+页内跳转
+
+
+
+
+1、[目录内容](#jump1)
+
+  
+
+-  1.1：[目录内容](#jump1.1)
+
+  
+
+-  1.2：[目录内容](#jump1.2)
+
+  
+
+-  1.3：[目录内容](#jump1.3)
+
+  
+
+-  1.4：[目录内容](#jump1.4)
+
+  
+
+- 1.5：[目录内容](#jump1.5)
+
+2、[目录内容](#jump2)
+
+  
+
+- 2.1：[目录内容](#jump2.1)
+
+  
+
+- 2.2：[目录内容](#jump2.2)
+
+  
+
+- 2.3：[目录内容](#jump2.3)
+
+  
+
+- 2.4：[目录内容](#jump2.4)
+
+  
+
+- 2.5：[目录内容](#jump2.5)
+
+  
+
+- 2.6：[目录内容](#jump2.6)
+
+
+
+<h2 id="1">1. <span id="jump1">目录</span></h2>
+内容
+<h3 id="1.1">1.1 <span id="jump1.1">目录</span></h3>
+内容
+<h3 id="1.2">1.2 <span id="jump1.2">目录</span></h3>
+内容
+<h3 id="1.3">1.3 <span id="jump1.3">目录</span></h3>
+内容
+<h3 id="1.4">1.4 <span id="jump1.4">目录</span></h3>
+内容
+<h3 id="1.5">1.5 <span id="jump1.5">目录</span></h3>
+内容
+<h3 id="1.6">1.6 <span id="jump1.6">目录</span></h3>
+内容
+
+<h2 id="2">2. <span id="jump1">目录</span></h2>
+内容
+<h3 id="2.1">2.1 <span id="jump2.1">目录</span></h3>
+内容
+<h3 id="2.2">2.2 <span id="jump2.2">目录</span></h3>
+内容
+<h3 id="2.3">2.3 <span id="jump2.3">目录</span></h3>
+内容
+<h3 id="1.4">2.4 <span id="jump2.4">目录</span></h3>
+内容
+<h3 id="2.5">2.5 <span id="jump2.5">目录</span></h3>
+内容
+<h3 id="2.6">2.6 <span id="jump2.6">目录</span></h3>
+内容
+
+
+
+
+
+
+
+
+
+
+
+<script language="javascript" type="text/javascript">
+// 生成目录索引列表
+// ref: http://www.cnblogs.com/wangqiguo/p/4355032.html
+// modified by: zzq
+function GenerateContentList()
+{
+    var mainContent = $('#cnblogs_post_body');
+    var h2_list = $('#cnblogs_post_body h2');//如果你的章节标题不是h2,只需要将这里的h2换掉即可
+
+    if(mainContent.length < 1)
+        return;
+
+    if(h2_list.length>0)
+    {
+        var content = '<a name="_labelTop"></a>';
+        content += '<div id="navCategory" style="color:#152e97;">';
+        content += '<h1 style="font-size:16px;background: #f68a33;border-radius: 6px 6px 6px 6px;box-shadow: 0 0 0 1px #5F5A4B, 1px 1px 6px 1px rgba(10, 10, 0, 0.5);color: #FFFFFF;font-size: 17px;font-weight: bold;height: 25px;line-height: 25px;margin: 18px 0 !important;padding: 8px 0 5px 30px;"><b>阅读目录</b></h1>';
+        content += '<ol>';
+        for(var i=0; i<h2_list.length; i++)
+        {
+            var go_to_top = '<div style="text-align: right;"><a href="#_labelTop" style="color:#f68a33">回到顶部</a><a name="_label' + i + '"></a></div>';
+            $(h2_list[i]).before(go_to_top);
+
+            var h3_list = $(h2_list[i]).nextAll("h3");
+            var li3_content = '';
+            for(var j=0; j<h3_list.length; j++)
+            {
+                var tmp = $(h3_list[j]).prevAll('h2').first();
+                if(!tmp.is(h2_list[i]))
+                    break;
+                var li3_anchor = '<a name="_label' + i + '_' + j + '"></a>';
+                $(h3_list[j]).before(li3_anchor);
+                li3_content += '<li><a href="#_label' + i + '_' + j + '"style="font-size:12px;color:#2b6695;">' + $(h3_list[j]).text() + '</a></li>';
+            }
+
+            var li2_content = '';
+            if(li3_content.length > 0)
+                li2_content = '<li><a href="#_label' + i + '"style="font-size:12px;color:#2b6695;">' + $(h2_list[i]).text() + '</a><ul>' + li3_content + '</ul></li>';
+            else
+                li2_content = '<li><a href="#_label' + i + '">' + $(h2_list[i]).text() + '</a></li>';
+            content += li2_content;
+        }
+        content += '</ol>';
+        content += '</div><p>&nbsp;</p>';
+        content += '<hr />';
+        if($('#cnblogs_post_body').length != 0 )
+        {
+            $($('#cnblogs_post_body')[0]).prepend(content);
+        }
+    }
+}
+
+GenerateContentList();
+</script>
+
+
+
+
+
