@@ -1,0 +1,69 @@
+//1、设置用户名
+git config user.name 你的用户名
+git config user.name lianguili
+
+git config --global user.name 你的用户名
+
+//2、设置邮箱
+git config user.email 你的邮箱
+git config user.name liliangui369@163.com
+
+git config --global user.email 你的邮箱
+
+//3、查看配置信息
+cat .git/config
+cat ~/.gitconfig
+注意：修改用户名和邮箱命令 和 设置用户名和邮箱命令一样，即：没有设置用户名和邮箱，则设置用户名和邮箱，有用户名和邮箱则修改用户名和邮箱
+
+//查看当前工作区 和 暂存区某个文件的状态
+git status filename
+
+//查看当前工作区 和 暂存区所有文件的状态
+git status
+
+//查看当前工作区 和 暂存区所有文件的详细状态列表
+git status -s
+
+
+git reset --soft [commit id或者HEAD]：仅仅只会回退本地仓库中的内容(即：git commit提交的内容)，不会影响到暂存区 和 工作区中的内容。如果回退之后还要提交，可以直接使用git commit命令提交到本地仓库即可。
+
+git reset --mixed [commit id或者HEAD]：此为默认方式，不带任何参数的git reset，默认就是这种方式，它会回退本地仓库中的内容(即：git commit提交的内容) 和 暂存区中的内容(即：git add提交的内容)，不会影响到工作区中的内容。
+
+git reset --hard [commit id或者HEAD]：本地仓库、暂存区 和 工作区全部回退到指定版本的内容。
+
+git reset --hard 文件存在时版本的局部hash值(即：hash值的前7位数)
+
+
+/*分支切换*/
+git checkout 新分支名
+
+//创建并切换分支
+git checkout -b 新分支名 [master]
+相当于
+git branch 新分支名
+git checkout 新分支名
+
+
+
+
+/*初始化*/
+git init   
+
+/*文件上传到暂存区*/
+git add  agui.md
+git add  .
+
+/*目录下所有的文件上传到本地仓库/版本库*/
+git commit -m "multi-platform"
+git commit -m "multi-platform"  agui.md
+
+
+//查看地址映射
+git remote -v
+
+//添加地址别名映射
+git remote add 别名 远程仓库地址
+git remote add origin git@github.com:liliangui/firstproject.git
+/*目录下所有的文件上传到本地仓库/版本库*/
+git push 远程仓库地址别名 本地仓库分支名
+git push origin master
