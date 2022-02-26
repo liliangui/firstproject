@@ -99,13 +99,19 @@ git Fetch拉取远程代码到本地并且在拉取过程中如果发现与本�
 
 ![image-20220226171648694](https://cdn.jsdelivr.net/gh/liliangui/picgo_picutre/img/image-20220226171648694.png)
 
-### **3.3、**将代码提交到服务器**：
+### **3.3、**将代码提交到服务器：
 
 Git的使用类似TFS、SVN等源代码或者文件管理器，惯例的流程：
 
 ![image-20220226171756241](https://cdn.jsdelivr.net/gh/liliangui/picgo_picutre/img/image-20220226171756241.png)
 
-　==**第一步：**改动，修改本地项目中的某些文件，如修改 README.md 内容，还可以增加一些文件， 如Hello.txt。==
+
+
+#### 3.3.1、修改本地文件：
+
+==第一步：**改动，修改本地项目中的某些文件，如修改 README.md 内容，还可以增加一些文件， 如Hello.txt。==
+
+#### 3.3.2、commit本地文件：
 
 　==**第二步：**提交本地，在本地项目的空白处点击鼠标右键，选择 【Git提交(C) -> "master"...】==
 
@@ -118,6 +124,10 @@ Git的使用类似TFS、SVN等源代码或者文件管理器，惯例的流程�
 弹出提交进度窗口，提交成功后还需要“推送”将本地仓库的修改推送到**远程仓库**。
 
 ![image-20220226172005222](https://cdn.jsdelivr.net/gh/liliangui/picgo_picutre/img/image-20220226172005222.png)
+
+
+
+#### 3.3.3、同步拉取，确保该的版本是最新的：
 
 　　==**第3步：**同步拉取，在实际工作中，如果多人协作或者多个客户端进行修改，那么我们还要拉取别人推送到在线仓库的内容，所以在推送之前需要先执行同步拉取(Pull ...)操作。==
 
@@ -139,10 +149,20 @@ Git的使用类似TFS、SVN等源代码或者文件管理器，惯例的流程�
 
 需要注意的是，和使用TFS、SVN的习惯一样，你在修改本地内容之前，最好先 拉取（pull）一下，减少冲突的可能。
 
-
+#### 3.3.3、pull到remote上（github或者gitee）：
 
 ==***\*第四步：推送远程\****，将提交到本地仓库的修改推送到远程仓库，可以直接在提交成功后的提示窗口上点击【推送(H)...】，或者在Git同步窗口点击【推送(H)...】，鼠标右击的菜单上也有相应的快捷操作：选择 【TortoiseGit(T)】→【推送(H)...】==
 
 ![image-20220226172251513](https://cdn.jsdelivr.net/gh/liliangui/picgo_picutre/img/image-20220226172251513.png)
 
 ![image-20220226172310856](https://cdn.jsdelivr.net/gh/liliangui/picgo_picutre/img/image-20220226172310856.png)
+
+
+
+### **3.4、**分支的使用：
+
+
+
+#### 3.4.1 建立分支
+
+![image-20220226174109852](https://cdn.jsdelivr.net/gh/liliangui/picgo_picutre/img/image-20220226174109852.png)
