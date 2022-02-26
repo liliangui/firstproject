@@ -67,3 +67,7 @@ git remote add origin git@github.com:liliangui/firstproject.git
 /*目录下所有的文件上传到本地仓库/版本库*/
 git push 远程仓库地址别名 本地仓库分支名
 git push origin master
+
+
+
+新家测试
