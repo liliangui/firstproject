@@ -22,13 +22,21 @@
 
 [[Git安装和TortoiseGit详细使用教程【基础篇】](https://www.cnblogs.com/mq0036/p/9442751.html)]()
 
-[TortoiseGit - 分支管理 -增加分支](https://www.cnblogs.com/McKean/p/6083526.html)
-
-[tortoisegit如何退回原来的版本及回退远端](https://blog.csdn.net/zhanglong_longlong/article/details/105242109)
-
 [TortoiseGit汉化及其使用教程](https://www.cnblogs.com/anayigeren/p/10177027.html)
 
 [windows下git和TortoiseGit(小乌龟)和putty安装配置对github进行操作](https://blog.csdn.net/dengzeyuan/article/details/78943816)
+
+
+
+[TortoiseGit - 分支管理 -增加分支](https://www.cnblogs.com/McKean/p/6083526.html)
+
+[TortoiseGit-合并分支方法](https://blog.csdn.net/weixin_43553694/article/details/104118402)
+
+[TortoiseGit实现分支的新增、合并、删除详细教程](https://blog.csdn.net/Hello_World_QWP/article/details/80885480)
+
+
+
+[TortoiseGit实现Git本地代码的恢复/还原/回滚](https://blog.csdn.net/qq_40982347/article/details/105149043?spm=1001.2101.3001.6661.1&utm_medium=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1.pc_relevant_aa&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1.pc_relevant_aa&utm_relevant_index=1)
 
 ## 二：TortoiseGit安装配置
 
@@ -159,10 +167,79 @@ Git的使用类似TFS、SVN等源代码或者文件管理器，惯例的流程�
 
 
 
-### **3.4、**分支的使用：
+### **3.4、**分支的使用（建立、提交（pull）、删除、合并）：
+
+[TortoiseGit - 分支管理 -增加分支](https://www.cnblogs.com/McKean/p/6083526.html)
+
+#### 3.4.1 建立分支，并将项目推到本地版本库
+
+![image-20220226174159184](https://cdn.jsdelivr.net/gh/liliangui/picgo_picutre/img/image-20220226174159184.png)
 
 
 
-#### 3.4.1 建立分支
+![image-20220226174238260](https://cdn.jsdelivr.net/gh/liliangui/picgo_picutre/img/image-20220226174238260.png)
 
-![image-20220226174109852](https://cdn.jsdelivr.net/gh/liliangui/picgo_picutre/img/image-20220226174109852.png)
+#### 3.4.2将本地版本库项目推到remote端
+
+![image-20220226174349969](https://cdn.jsdelivr.net/gh/liliangui/picgo_picutre/img/image-20220226174349969.png)
+
+![image-20220226174409663](https://cdn.jsdelivr.net/gh/liliangui/picgo_picutre/img/image-20220226174409663.png)
+
+github中生成了一个测试的分支
+
+![image-20220226175649178](https://cdn.jsdelivr.net/gh/liliangui/picgo_picutre/img/image-20220226175649178.png)
+
+#### 3.4.3、分支合并
+
+1、首先当前分支 “提交” 并 “推送” 到服务器上，比如开发分支 dev 合并到 master 上
+
+2、右键 > “切换分支” 到要合并的分支 master
+
+![image-20220226210816399](https://cdn.jsdelivr.net/gh/liliangui/picgo_picutre/img/image-20220226210816399.png)
+
+3、拉取最新 master 分支，然后 右键 选择 合并，选择 dev 分支，勾选合并，确定
+
+![image-20220226210859293](https://cdn.jsdelivr.net/gh/liliangui/picgo_picutre/img/image-20220226210859293.png)
+
+4、确定后可能会提示有错误，这是需要解决冲突，右键 “解决冲突”
+
+![image-20220226210924987](https://cdn.jsdelivr.net/gh/liliangui/picgo_picutre/img/image-20220226210924987.png)
+
+![image-20220226210936877](https://cdn.jsdelivr.net/gh/liliangui/picgo_picutre/img/image-20220226210936877.png)
+
+6、解决完冲突，提交并推动到服务器，合并完成，记得切换回自己的分支继续开发哦
+
+
+
+#### 3.4.4、分支删除
+
+如果分支不想用了，可以直接删除，这儿为了体现出效果（再次将分支进行合并），分支删除后，代码将还原到主干master，右键 -> TortoiseGit -> Merge 点击 Branch 后面的选项，如下图：
+
+![image-20220226211856268](https://cdn.jsdelivr.net/gh/liliangui/picgo_picutre/img/image-20220226211856268.png)
+
+
+
+### **3.5、**代码的reset：
+
+1.首先进入版本日志对话框: 右击原代码文件夹–>TortoiseGit–>Show log
+
+![image-20220226175223671](https://cdn.jsdelivr.net/gh/liliangui/picgo_picutre/img/image-20220226175223671.png)
+
+2.选择要[回滚](https://so.csdn.net/so/search?q=回滚&spm=1001.2101.3001.7020)的版本右击–>选择①或②
+
+![image-20220226175256039](https://cdn.jsdelivr.net/gh/liliangui/picgo_picutre/img/image-20220226175256039.png)
+
+3.选择①的情况，直接在源代码上回滚，会删除源代码:
+
+![image-20220226175321479](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20220226175321479.png)
+
+4. 选择②的情况，导出代码的压缩包，解压后即可使用；
+
+![image-20220226175343954](https://cdn.jsdelivr.net/gh/liliangui/picgo_picutre/img/image-20220226175343954.png)
+
+![image-20220226175359351](https://cdn.jsdelivr.net/gh/liliangui/picgo_picutre/img/image-20220226175359351.png)
+
+
+
+### 
+
